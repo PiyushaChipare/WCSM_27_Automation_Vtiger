@@ -99,6 +99,5 @@ public class DemoScript
 		System.out.println("Sign out successfull");
 		
 		
-		
 	}
 }

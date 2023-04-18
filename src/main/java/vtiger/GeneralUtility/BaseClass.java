@@ -9,9 +9,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import vtiger.ObjectRepository.HomePage;
@@ -21,20 +24,23 @@ public class BaseClass
 {
 	
 	public WebDriver driver=null;
+	public static WebDriver sDriver;
 	public WebDriverUtility wUtil=new WebDriverUtility();
 	public PropertyFileUtility pUtil = new PropertyFileUtility();
 	public  ExcelFileUtility eUtil=new ExcelFileUtility();
 	public JavaUtility jUtil=new JavaUtility();
 	
 	
-	@BeforeSuite(groups = {"SmokeSuite","RegressionSuite"})
+	@BeforeSuite(alwaysRun = true)
 	public void bsConfig()
 	{
 		System.out.println("@BeforeSuite");
 	}
 	
+	//@Parameters("browser")
+	//@BeforeTest
 	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
-	public void bcConfig() throws IOException
+	public void bcConfig(/*String BROWSER*/) throws IOException
 	{
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
 		String URL = pUtil.readDataFromPropertyFile("url");
@@ -54,6 +60,7 @@ public class BaseClass
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();	
 		}
+		sDriver=driver;
 		wUtil.maximizeWindow(driver);
 		wUtil.waitForPageLoad(driver);
 		driver.get(URL);
@@ -80,6 +87,7 @@ public class BaseClass
 		hp.SignoutFromApp(driver);
 		System.out.println("Logout Successful");
 	}
+	//@AfterTest
 	@AfterClass(groups = {"SmokeSuite","RegressionSuite"})
 	public void acConfig()
 	{

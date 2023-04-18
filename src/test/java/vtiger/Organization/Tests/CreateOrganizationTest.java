@@ -3,6 +3,7 @@ package vtiger.Organization.Tests;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import vtiger.GeneralUtility.BaseClass;
@@ -11,6 +12,7 @@ import vtiger.ObjectRepository.CreatedOrganizationsInfoPage;
 import vtiger.ObjectRepository.HomePage;
 import vtiger.ObjectRepository.OrganizationsPage;
 
+@Listeners(vtiger.GeneralUtility.ListenersImplementation.class)
 public class CreateOrganizationTest extends BaseClass {
 
 	@Test(groups = "RegressionSuite")

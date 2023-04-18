@@ -1,67 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-07T12:11:53 IST" name="Default suite" finished-at="2023-04-07T12:12:36 IST" duration-ms="43095">
+  <suite started-at="2023-04-15T13:23:02 IST" name="Suite" finished-at="2023-04-15T13:24:15 IST" duration-ms="72800">
     <groups>
+      <group name="RegressionSuite">
+        <method signature="CreateOrganizationTest.createOrganizationTest()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" name="createOrganizationTest" class="vtiger.Organization.Tests.CreateOrganizationTest"/>
+      </group> <!-- RegressionSuite -->
+      <group name="SmokeSuite">
+        <method signature="CreateContactWithOrganizationTest.createContactWithOrgTest()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" name="createContactWithOrgTest" class="vtiger.Contacts.Tests.CreateContactWithOrganizationTest"/>
+      </group> <!-- SmokeSuite -->
     </groups>
-    <test started-at="2023-04-07T12:11:53 IST" name="Default test" finished-at="2023-04-07T12:12:36 IST" duration-ms="43095">
-      <class name="vtiger.Organization.Tests.CreateOrganizationTest">
-        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:11:53 IST" name="bsConfig" finished-at="2023-04-07T12:11:53 IST" duration-ms="14" status="PASS">
+    <test started-at="2023-04-15T13:23:02 IST" name="Test" finished-at="2023-04-15T13:24:15 IST" duration-ms="72800">
+      <class name="vtiger.Contacts.Tests.CreateContactWithOrganizationTest">
+        <test-method is-config="true" signature="bsConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:02 IST" name="bsConfig" finished-at="2023-04-15T13:23:02 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bsConfig -->
-        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:11:53 IST" name="bcConfig" finished-at="2023-04-07T12:12:01 IST" duration-ms="7648" status="PASS">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:02 IST" name="bcConfig" finished-at="2023-04-15T13:23:30 IST" duration-ms="27388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bcConfig -->
-        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:12:01 IST" name="bmConfig" finished-at="2023-04-07T12:12:06 IST" duration-ms="5361" status="PASS">
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:30 IST" name="bmConfig" finished-at="2023-04-15T13:23:32 IST" duration-ms="2516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bmConfig -->
-        <test-method signature="createOrganizationTest()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:12:06 IST" name="createOrganizationTest" finished-at="2023-04-07T12:12:33 IST" duration-ms="26937" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrganizationTest -->
-        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:12:33 IST" name="amConfig" finished-at="2023-04-07T12:12:36 IST" duration-ms="3077" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- amConfig -->
-        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:12:36 IST" name="acConfig" finished-at="2023-04-07T12:12:36 IST" duration-ms="15" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+        <test-method signature="createContactWithOrgTest()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:32 IST" name="createContactWithOrgTest" finished-at="2023-04-15T13:23:44 IST" duration-ms="11416" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, actions {actions=[org.openqa.selenium.interactions.Sequence@7730ef88]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 111.0, moz:accessibilityChecks: false, moz:buildID: 20230309232128, moz:debuggerAddress: 127.0.0.1:18918, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8684, moz:profile: C:\Users\PIYUSH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:18918/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}]]>
+              <![CDATA[null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [null, actions {actions=[org.openqa.selenium.interactions.Sequence@7730ef88]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 111.0, moz:accessibilityChecks: false, moz:buildID: 20230309232128, moz:debuggerAddress: 127.0.0.1:18918, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 8684, moz:profile: C:\Users\PIYUSH~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:18918/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:145)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-at vtiger.GeneralUtility.WebDriverUtility.mouseHoverAction(WebDriverUtility.java:146)
-at vtiger.ObjectRepository.HomePage.SignoutFromApp(HomePage.java:55)
-at vtiger.GeneralUtility.BaseClass.acConfig(BaseClass.java:87)
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at vtiger.Contacts.Tests.CreateContactWithOrganizationTest.createContactWithOrgTest(CreateContactWithOrganizationTest.java:44)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -80,15 +63,95 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContactWithOrgTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:44 IST" name="amConfig" finished-at="2023-04-15T13:23:45 IST" duration-ms="1399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:45 IST" name="bmConfig" finished-at="2023-04-15T13:23:47 IST" duration-ms="2285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="demo()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:47 IST" name="demo" finished-at="2023-04-15T13:23:47 IST" duration-ms="10" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: null
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.fail(Assert.java:106)
+at vtiger.Contacts.Tests.CreateContactWithOrganizationTest.demo(CreateContactWithOrganizationTest.java:63)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:48 IST" name="amConfig" finished-at="2023-04-15T13:23:52 IST" duration-ms="4111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:23:52 IST" name="acConfig" finished-at="2023-04-15T13:23:54 IST" duration-ms="2314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- acConfig -->
-        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@4fb0f2b9]" started-at="2023-04-07T12:12:36 IST" name="asConfig" finished-at="2023-04-07T12:12:36 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="asConfig()[pri:0, instance:vtiger.Contacts.Tests.CreateContactWithOrganizationTest@6379eb]" started-at="2023-04-15T13:24:15 IST" name="asConfig" finished-at="2023-04-15T13:24:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- asConfig -->
+      </class> <!-- vtiger.Contacts.Tests.CreateContactWithOrganizationTest -->
+      <class name="vtiger.Organization.Tests.CreateOrganizationTest">
+        <test-method is-config="true" signature="bcConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" started-at="2023-04-15T13:23:54 IST" name="bcConfig" finished-at="2023-04-15T13:23:57 IST" duration-ms="3391" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bcConfig -->
+        <test-method is-config="true" signature="bmConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" started-at="2023-04-15T13:23:57 IST" name="bmConfig" finished-at="2023-04-15T13:24:00 IST" duration-ms="2552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bmConfig -->
+        <test-method signature="createOrganizationTest()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" started-at="2023-04-15T13:24:00 IST" name="createOrganizationTest" finished-at="2023-04-15T13:24:11 IST" duration-ms="11231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrganizationTest -->
+        <test-method is-config="true" signature="amConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" started-at="2023-04-15T13:24:11 IST" name="amConfig" finished-at="2023-04-15T13:24:13 IST" duration-ms="1379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amConfig -->
+        <test-method is-config="true" signature="acConfig()[pri:0, instance:vtiger.Organization.Tests.CreateOrganizationTest@5b239d7d]" started-at="2023-04-15T13:24:13 IST" name="acConfig" finished-at="2023-04-15T13:24:15 IST" duration-ms="2377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- acConfig -->
       </class> <!-- vtiger.Organization.Tests.CreateOrganizationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

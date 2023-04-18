@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import vtiger.GeneralUtility.BaseClass;
@@ -15,6 +16,7 @@ import vtiger.ObjectRepository.CreatedOrganizationsInfoPage;
 import vtiger.ObjectRepository.HomePage;
 import vtiger.ObjectRepository.OrganizationsPage;
 
+@Listeners(vtiger.GeneralUtility.ListenersImplementation.class)
 public class CreateContactWithOrganizationTest extends BaseClass {
 
 	@Test(groups = "SmokeSuite")
@@ -39,6 +41,7 @@ public class CreateContactWithOrganizationTest extends BaseClass {
 		CreatedOrganizationsInfoPage coip=new CreatedOrganizationsInfoPage(driver);
 		String orgHeader = coip.getCreatedOrganizationHeader().getText();
 		Assert.assertTrue(orgHeader.contains(ORGNAME));
+		Assert.fail();
 					
 		//Step 9: Create Contact with organization name
 		hp.getContactsBtn().click();
@@ -57,5 +60,6 @@ public class CreateContactWithOrganizationTest extends BaseClass {
 	public void demo()
 	{
 		System.out.println("Demo done");
+		Assert.fail();
 	}
 }
